@@ -91,8 +91,8 @@ std::vector<bbox2_t> CAIDnn::Postprocess(Mat& frame, const std::vector<Mat>& out
 
 //	string strImg = _directory + _prefix + string(buf) + ".png";
 //	string strTxt = _directory + _prefix + string(buf) + ".txt";
-	string strImg = _directory + _prefix + times + ".png";
-	string strTxt = _directory + _prefix + times + ".txt";
+	string strImg = _directory + _prefix + "-" + times + ".png";
+	string strTxt = _directory + _prefix + "-" + times + ".txt";
 	imwrite(strImg, frame);
 
 	if (!_net.empty()) {
